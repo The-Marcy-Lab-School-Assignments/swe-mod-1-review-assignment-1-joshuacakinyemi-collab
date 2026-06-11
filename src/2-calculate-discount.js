@@ -8,7 +8,7 @@ const calculateDiscount = (price) => {
   let discontRate;
   if (price > 100) {
     discountRate = 0.1;
-  } else {  // discontRate is within a if statement making the scope of the variable unable to be use outside of it.
+  } else {  // discontRate within a if statement is declare as a constant while it already a let varible causing a syntax error.
     discountRate = 0.05;
   }
 
