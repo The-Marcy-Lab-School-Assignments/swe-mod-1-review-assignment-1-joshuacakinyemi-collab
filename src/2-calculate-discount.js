@@ -5,10 +5,11 @@ Analyze the following code. Identify the bug and fix it. Then, below, explain wh
 
 */
 const calculateDiscount = (price) => {
+  let discontRate;
   if (price > 100) {
-    const discountRate = 0.1;
-  } else {
-    const discountRate = 0.05;
+    discountRate = 0.1;
+  } else {  // discontRate within a if statement is declare as a constant while it already a let varible causing a syntax error.
+    discountRate = 0.05;
   }
 
   const discount = price * discountRate;
